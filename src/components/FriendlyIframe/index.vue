@@ -84,7 +84,7 @@ export default {
     }, 200),
     initIframe() {
       this.iframeEl = document.createElement('iframe');
-      this.iframeEl.setAttribute('style', 'visibility: hidden; position: absolute; top: -99999px; border: none;');
+      this.iframeEl.setAttribute('style', 'visibility: hidden; position: absolute; top: -99999px; border: none;width:100%;height:100%');
       if (this.src) this.iframeEl.setAttribute('iframe-src', this.src);
       if (this.className) this.iframeEl.setAttribute('class', this.className);
       if (this.class) this.iframeEl.setAttribute('class', this.class);
@@ -94,6 +94,10 @@ export default {
       if (this.name) this.iframeEl.setAttribute('name', this.name);
       if (this.width) this.iframeEl.setAttribute('width', this.width);
       if (this.height) this.iframeEl.setAttribute('height', this.height);
+
+
+      console.log("############ this.width",this.width);
+      console.log("############ this.height",this.height);
 
       this.$el.appendChild(this.iframeEl);
 
