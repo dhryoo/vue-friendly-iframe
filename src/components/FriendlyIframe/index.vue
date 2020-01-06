@@ -37,10 +37,9 @@ export default {
       type: String,
       required: false
     },
-    name: {
-      type: String,
-      required: false
-    }
+    name: { type: String, required: false }
+    height: { type: String, required: false }
+    width: { type: String, required: false }
   },
   data() {
     return {
@@ -93,6 +92,8 @@ export default {
       if (this.target) this.iframeEl.setAttribute('target', this.target);
       if (this.allow) this.iframeEl.setAttribute('allow', this.allow);
       if (this.name) this.iframeEl.setAttribute('name', this.name);
+      if (this.width) this.iframeEl.setAttribute('width', this.width);
+      if (this.height) this.iframeEl.setAttribute('height', this.height);
 
       this.$el.appendChild(this.iframeEl);
 
